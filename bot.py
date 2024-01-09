@@ -21,7 +21,7 @@ coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Nuke", "Vertigo", "Anci
 
 
 mirage = {
-    "jungle": "https://imgur.com/a/AQsjIOY",
+    "jungle": "https://imgur.com/iKj3upn",
     "ct" : "https://imgur.com/a/oKP0u9A",
     "stairs" : "https://imgur.com/49rLNUu",
     "con" : "https://imgur.com/9u2Y08P",
@@ -45,9 +45,12 @@ def dictionary_keys(d):
         all_keys += "\n" + keys
     return all_keys
 
+
 @client.event
 async def on_ready():
     print("Go go go!")
+    await client.change_presence(activity=discord.CustomActivity(name='TacToss.xyz | $help',emoji='🤖'))
+
 
 @client.command(name = "smoke", aliases=["smokes"], brief = "Get GIF of lineup. Usage: $smoke <map> <area>")
 async def smoke(ctx, map, area):
