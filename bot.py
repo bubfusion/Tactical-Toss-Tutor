@@ -86,6 +86,6 @@ async def lineups(ctx, map):
 
 
 client.run(BOT_TOKEN)
-##test token MTE5NDIxNTk3MDQ4MzQ3NDQzMg.GFvOLm.lSrqh_5-lAMmad8GeH1BSBRN9iaqdYXs_ktWa4
+##test token
 ##real token MTE5NDA0MzM5NzQ1MTgwODg2OA.GN5UfP.lKwRvttz6kYbAQN4Rg0H4AF4HzAmqPgoGl77Uc
 
