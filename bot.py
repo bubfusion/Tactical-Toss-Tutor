@@ -39,8 +39,8 @@ def dictionary_keys(d):
 async def on_ready():
     print("Go go go!")
 
-@client.command(aliases=["smoke", "smokes"])
-async def _smoke(ctx, map, smoke):
+@client.command(name = "smoke", aliases=["smokes"], brief = "Get GIF of lineup. Usage: $smoke <map> <area>")
+async def smoke(ctx, map, area):
     map = map.lower()
 
     if(map in coming_soon):
@@ -51,16 +51,16 @@ async def _smoke(ctx, map, smoke):
 
     else:
          map_dic = map_to_dictionary[map]
-         if(smoke in map_dic):
-             await ctx.send(f'{map_dic[smoke]}')
+         if(area in map_dic):
+             await ctx.send(f'{map_dic[area]}')
          else:   
             await ctx.send(f'Uh oh, that smoke isnt added yet!')
 
-@client.command(aliases=["map", "maps"])
-async def _maps(ctx):
+@client.command(brief = "Lists maps with smoke lineups")
+async def maps(ctx):
     await ctx.send(f"The current maps with smokes are ```{list_to_newline_string(maps_list_display)} \n```Maps that are coming soon are```{list_to_newline_string(coming_soon_display)}```")
 
-@client.command()
+@client.command(brief = "Displays lineups for given map. Usage: $lineups <map>")
 async def lineups(ctx, map):
     map = map.lower()
 
@@ -73,16 +73,6 @@ async def lineups(ctx, map):
     else:
          map_dic = map_to_dictionary[map]
          await ctx.send(f"The current lineups for {map} are ```{dictionary_keys(map_dic)}```")
-
-class MyHelpCommand(commands.MinimalHelpCommand):
-    async def send_pages(self):
-        destination = self.get_destination()
-        e = discord.Embed(color=discord.Color.blurple(), description='')
-        for page in self.paginator.pages:
-            e.description += page
-        await destination.send(embed=e)
-
-client.help_command = MyHelpCommand()
 
 
 client.run("MTE5NDA0MzM5NzQ1MTgwODg2OA.GN5UfP.lKwRvttz6kYbAQN4Rg0H4AF4HzAmqPgoGl77Uc")
