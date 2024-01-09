@@ -61,7 +61,7 @@ async def smoke(ctx, map, area):
     else:
          map_dic = map_to_dictionary[map]
          if(area in map_dic):
-             await ctx.send(f'{map_dic[area]}')
+             await ctx.send(f'Smoke for {area} \n {map_dic[area]}')
          else:   
             await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
 
