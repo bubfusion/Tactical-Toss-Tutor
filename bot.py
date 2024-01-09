@@ -24,7 +24,8 @@ mirage = {
     "ct" : "https://imgur.com/a/oKP0u9A",
     "stairs" : "https://imgur.com/49rLNUu",
     "con" : "https://imgur.com/9u2Y08P",
-    "cat" : "https://imgur.com/7wWqKUX"
+    "cat" : "https://imgur.com/7wWqKUX",
+    "marketwindow" : "https://imgur.com/a/VbEsDo6"
 }
 
 map_to_dictionary = {
