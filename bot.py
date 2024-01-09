@@ -44,17 +44,17 @@ async def smoke(ctx, map, area):
     map = map.lower()
 
     if(map in coming_soon):
-        await ctx.send("That map is coming soon!")
+        await ctx.send("That map is coming soon! To see the current available maps, try $maps")
 
     elif(map not in maps_list):
-        await ctx.send('Oh no! Looks like you typed in an invalid map')
+        await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try $maps')
 
     else:
          map_dic = map_to_dictionary[map]
          if(area in map_dic):
              await ctx.send(f'{map_dic[area]}')
          else:   
-            await ctx.send(f'Uh oh, that smoke isnt added yet!')
+            await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try $lineups <map>')
 
 @client.command(brief = "Lists maps with smoke lineups")
 async def maps(ctx):
@@ -65,10 +65,10 @@ async def lineups(ctx, map):
     map = map.lower()
 
     if(map in coming_soon):
-        await ctx.send("That map is coming soon!")
+        await ctx.send("That map is coming soon! To see the current available maps, try $maps")
 
     elif(map not in maps_list):
-        await ctx.send('Oh no! Looks like you typed in an invalid map')
+        await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try $maps')
 
     else:
          map_dic = map_to_dictionary[map]
