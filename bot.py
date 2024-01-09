@@ -1,6 +1,7 @@
 
 import discord
 from discord.ext import commands
+from config import BOT_TOKEN
 
 
 intents = discord.Intents.default()
@@ -84,6 +85,7 @@ async def lineups(ctx, map):
          await ctx.send(f"The current lineups for {map} are ```{dictionary_keys(map_dic)}```")
 
 
-client.run("MTE5NDA0MzM5NzQ1MTgwODg2OA.GN5UfP.lKwRvttz6kYbAQN4Rg0H4AF4HzAmqPgoGl77Uc")
-
+client.run(BOT_TOKEN)
+##test token MTE5NDIxNTk3MDQ4MzQ3NDQzMg.GFvOLm.lSrqh_5-lAMmad8GeH1BSBRN9iaqdYXs_ktWa4
+##real token MTE5NDA0MzM5NzQ1MTgwODg2OA.GN5UfP.lKwRvttz6kYbAQN4Rg0H4AF4HzAmqPgoGl77Uc
 
