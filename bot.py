@@ -6,7 +6,11 @@ from discord.ext import commands
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = commands.Bot(command_prefix='$', intents=intents)
+help_command = commands.DefaultHelpCommand(
+    no_category = 'Commands'
+)
+
+client = commands.Bot(command_prefix='$', intents=intents, help_command=help_command)
 
 maps_list = ["mirage"]
 coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "dust2", "italy"]
@@ -16,7 +20,10 @@ coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Nuke", "Vertigo", "Anci
 
 
 mirage = {
-    "jungle": "https://imgur.com/Q7tpOYV"
+    "jungle": "https://imgur.com/a/AQsjIOY",
+    "ct" : "https://imgur.com/a/oKP0u9A",
+    "stairs" : "https://imgur.com/49rLNUu",
+    "con" : "https://imgur.com/9u2Y08P"
 }
 
 map_to_dictionary = {
@@ -44,17 +51,17 @@ async def smoke(ctx, map, area):
     map = map.lower()
 
     if(map in coming_soon):
-        await ctx.send("That map is coming soon! To see the current available maps, try $maps")
+        await ctx.send("That map is coming soon! To see the current available maps, try ``$maps``")
 
     elif(map not in maps_list):
-        await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try $maps')
+        await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try ``$maps``')
 
     else:
          map_dic = map_to_dictionary[map]
          if(area in map_dic):
              await ctx.send(f'{map_dic[area]}')
          else:   
-            await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try $lineups <map>')
+            await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
 
 @client.command(brief = "Lists maps with smoke lineups")
 async def maps(ctx):
