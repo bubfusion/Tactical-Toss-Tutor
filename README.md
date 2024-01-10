@@ -18,6 +18,7 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
+  <a href="#commands">Commands</a> •
   <a href="#support">Support</a> •
   <a href="#license">License</a>
   </p>
