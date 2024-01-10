@@ -78,6 +78,12 @@ Join the offical Tactical Toss Tutor\
 Link to the Tactical Toss Tutor website\
 ```$info```
 
+Shows kill reward for a weapon\
+```$kr <weapon>```
+
+Shows current weapons in CS2\
+```$weapons```
+
 **More coming soon!**
 
 
