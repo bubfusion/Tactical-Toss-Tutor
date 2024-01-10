@@ -112,6 +112,7 @@ async def info(ctx):
 
 @client.command(brief = "Gets the kill reward for a weapon. Usage: $kr <weapon>")
 async def kr(ctx, weapon):
+    weapon = weapon.lower()
     if (weapon in KillReward.kill_reward):
         await ctx.send(F"{weapon} kill-reward: ${KillReward.kill_reward[weapon]}")
     else:
