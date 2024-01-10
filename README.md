@@ -75,6 +75,9 @@ Invite the bot to your own server\
 Join the offical Tactical Toss Tutor\
 ```$join```
 
+Link to the Tactical Toss Tutor website\
+```$info```
+
 **More coming soon!**
 
 
