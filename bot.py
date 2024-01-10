@@ -113,7 +113,13 @@ async def info(ctx):
 @client.command(brief = "Gets the kill reward for a weapon. Usage: $kr <weapon>")
 async def kr(ctx, weapon):
     if (weapon in KillReward.kill_reward):
-        await ctx.send(F"{weapon} kill-reward: {KillReward.kill_reward[weapon]}")
+        await ctx.send(F"{weapon} kill-reward: ${KillReward.kill_reward[weapon]}")
+    else:
+        await ctx.send("Can't find that weapon! Try $weapons to see the avaliable weapons")
+
+@client.command(brief = "Get the list of weapons in CS2")
+async def weapons(ctx):
+    await ctx.send(dictionary_keys(KillReward.kill_reward))
 
 client.run(BOT_TOKEN)
 
