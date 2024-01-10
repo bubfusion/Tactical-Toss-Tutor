@@ -13,10 +13,10 @@ help_command = commands.DefaultHelpCommand(
 
 client = commands.Bot(command_prefix='$', intents=intents, help_command=help_command)
 
-maps_list = ["mirage"]
+maps_list = ["mirage", "inferno"]
 coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "dust2", "italy"]
 
-maps_list_display = ["Mirage"]
+maps_list_display = ["Mirage (WIP)", "Inferno (WIP)"]
 coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Nuke", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)", "Italy"]
 
 
@@ -29,8 +29,15 @@ mirage = {
     "marketwindow" : "https://imgur.com/a/VbEsDo6"
 }
 
+inferno = {
+    "coffin" : "https://imgur.com/Xm2ZAeM",
+    "ct" : "https://imgur.com/xXfbicf",
+    "halfwall" : "https://imgur.com/MIcZ4WK" 
+}
+
 map_to_dictionary = {
-    "mirage" : mirage
+    "mirage" : mirage,
+    "inferno" : inferno
 }
 
 def list_to_newline_string(list):
