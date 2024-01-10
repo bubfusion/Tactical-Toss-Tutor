@@ -20,7 +20,8 @@
   <a href="#how-to-use">How To Use</a> •
   <a href="#support">Support</a> •
   <a href="#license">License</a>
-  
+  </p>
+  <p align="center">
   <img src="https://github.com/bubfusion/Tactical-Toss-Tutor/blob/main/Images/Preview.gif" alt="Preview" width="80%">
 </p>
 
