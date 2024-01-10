@@ -43,6 +43,10 @@ Getting this bot in your discord is as easy as just inviting it! Below is a butt
 <a href="https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="11%"></a>
 
 #### Method 2:
+If you do not have a server you can add the bot to, join the offical Tactical Toss Tutor one!\
+<a href="https://discord.gg/FAUuEUqsBD"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
+
+#### Method 3:
 Since this is an open source program, you can run the bot yourself! \
 **Prerequisites**\
 [Tactical Toss Tutor Repo](https://github.com/bubfusion/Tactical-Toss-Tutor)\
