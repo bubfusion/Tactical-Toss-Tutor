@@ -32,7 +32,11 @@ mirage = {
 inferno = {
     "coffin" : "https://imgur.com/Xm2ZAeM",
     "ct" : "https://imgur.com/xXfbicf",
-    "halfwall" : "https://imgur.com/MIcZ4WK" 
+    "halfwall" : "https://imgur.com/MIcZ4WK",
+    "library" : "https://imgur.com/t1VZ9IE",
+    "arch" : "https://imgur.com/sBCAqI6",
+    "short" : "https://imgur.com/KSCNlHY",
+    "long" : "https://imgur.com/OzKDwuZ"
 }
 
 map_to_dictionary = {
