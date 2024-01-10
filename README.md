@@ -69,10 +69,10 @@ Get a GIF for a specific area you want to smoke\
 View commands\
 ```$help```
 
-Invite the bot to your own server
+Invite the bot to your own server\
 ```$invite```
 
-Join the offical Tactical Toss Tutor
+Join the offical Tactical Toss Tutor\
 ```$join```
 
 **More coming soon!**
