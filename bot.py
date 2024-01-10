@@ -120,7 +120,7 @@ async def kr(ctx, weapon):
 
 @client.command(brief = "Get the list of weapons in CS2")
 async def weapons(ctx):
-    await ctx.send(F"```{dictionary_keys(KillReward.kill_reward)}```")
+    await ctx.send(F"```{dictionary_keys(KillReward.kill_reward_display)}```")
 
 client.run(BOT_TOKEN)
 
