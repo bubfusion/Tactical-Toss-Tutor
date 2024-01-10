@@ -122,5 +122,15 @@ async def kr(ctx, weapon):
 async def weapons(ctx):
     await ctx.send(F"```{dictionary_keys(KillReward.kill_reward_display)}```")
 
+class MyHelpCommand(commands.MinimalHelpCommand):
+    async def send_pages(self):
+        destination = self.get_destination()
+        e = discord.Embed(color=discord.Color.blurple(), description='')
+        for page in self.paginator.pages:
+            e.description += page
+        await destination.send(embed=e)
+
+client.help_command = MyHelpCommand()
+
 client.run(BOT_TOKEN)
 
