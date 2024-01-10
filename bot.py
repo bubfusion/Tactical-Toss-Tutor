@@ -98,6 +98,14 @@ async def lineups(ctx, map):
          map_dic = map_to_dictionary[map]
          await ctx.send(f"The current lineups for {map} are ```{dictionary_keys(map_dic)}```")
 
+@client.command(brief = "Get an invite link to the offical Tactical Toss Tutor Discord!")
+async def join(ctx):
+    await ctx.send("Here is an invite to the Tactical Toss Tutor Discord: https://discord.gg/FAUuEUqsBD")
+
+@client.command(brief = "Get a link to invite the Tactical Toss Tutor bot to your own server!")
+async def invite(ctx):
+    await ctx.send("You can add me to your own server with this link: https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot")
+
 
 client.run(BOT_TOKEN)
 
