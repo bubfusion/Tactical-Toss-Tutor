@@ -2,6 +2,7 @@
 import discord
 from discord.ext import commands
 from config import BOT_TOKEN
+import KillReward
 
 
 intents = discord.Intents.default()
@@ -18,7 +19,6 @@ coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "d
 
 maps_list_display = ["Mirage", "Inferno"]
 coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Nuke", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
-
 
 mirage = {
     "jungle": "https://imgur.com/iKj3upn",
@@ -109,6 +109,11 @@ async def invite(ctx):
 @client.command(brief = "Get a link to the Tactical Toss Tutor website")
 async def info(ctx):
     await ctx.send("The offical Tactical Toss Tutor Website: http://tactoss.xyz/")
+
+@client.command(brief = "Gets the kill reward for a weapon. Usage: $kr <weapon>")
+async def kr(ctx, weapon):
+    if (weapon in KillReward.kill_reward):
+        await ctx.send(F"{weapon} kill-reward: {KillReward.kill_reward[weapon]}")
 
 client.run(BOT_TOKEN)
 

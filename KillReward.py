@@ -1,0 +1,40 @@
+RIFLE_KR = 300
+PISTOL_KR = 300
+SHOTGUN_KR = 900
+SMG_KR = 300
+
+kill_reward = {
+    "cz" : 100,
+    "deagle" : PISTOL_KR,
+    "dualies" : PISTOL_KR,
+    "five-seven" : PISTOL_KR,
+    "glock" : PISTOL_KR,
+    "p2000" : PISTOL_KR,
+    "p250" : PISTOL_KR,
+    "r8" : PISTOL_KR,
+    "tec-9" : PISTOL_KR,
+    "usps" : PISTOL_KR,
+    "ak" : RIFLE_KR,
+    "aug" : RIFLE_KR,
+    "awp" : 100,
+    "famas" : RIFLE_KR,
+    "auto" : RIFLE_KR,
+    "galil" : RIFLE_KR,
+    "m4a1s" : RIFLE_KR,
+    "m4a4" : RIFLE_KR,
+    "sg" : RIFLE_KR,
+    "scout" : RIFLE_KR,
+    "mac10" : SMG_KR,
+    "mp5" : SMG_KR,
+    "mp7" : SMG_KR,
+    "mp9" : SMG_KR,
+    "bizon" : SMG_KR,
+    "p90" : 300,
+    "ump" : SMG_KR,
+    "sawed-off" : SHOTGUN_KR,
+    "mag7" : SHOTGUN_KR,
+    "nova" : SHOTGUN_KR,
+    "xm" : SHOTGUN_KR,
+    "m249"  : RIFLE_KR,
+    "negev" : RIFLE_KR
+}
