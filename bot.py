@@ -106,6 +106,9 @@ async def join(ctx):
 async def invite(ctx):
     await ctx.send("You can add me to your own server with this link: https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot")
 
+@client.command(brief = "Get a link to the Tactical Toss Tutor website")
+async def info(ctx):
+    await ctx.send("The offical Tactical Toss Tutor Website: http://tactoss.xyz/")
 
 client.run(BOT_TOKEN)
 
