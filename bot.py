@@ -16,7 +16,7 @@ client = commands.Bot(command_prefix='$', intents=intents, help_command=help_com
 maps_list = ["mirage", "inferno"]
 coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "dust2"]
 
-maps_list_display = ["Mirage (WIP)", "Inferno (WIP)"]
+maps_list_display = ["Mirage", "Inferno"]
 coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Nuke", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
 
 
