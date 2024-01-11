@@ -13,7 +13,9 @@
 <p align="center">
 <a href="https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="12%"></a>
 <a href="https://discord.gg/FAUuEUqsBD"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
+<a href="https://github.com/bubfusion/Tactical-Toss-Tutor"><img src ="https://img.shields.io/badge/Github-white?style=for-the-badge&logo=github&logoColor=black" alt="Github" width="12.5%"></a>
 </p>
+
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
