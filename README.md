@@ -54,9 +54,10 @@ Since this is an open source program, you can run the bot yourself! \
 [Tactical Toss Tutor Repo](https://github.com/bubfusion/Tactical-Toss-Tutor)\
 [Python 3](https://www.python.org/downloads/)\
 [Discord.py](https://discordpy.readthedocs.io/en/stable/intro.html)\
-[Discord Bot Account](https://discord.com/developers/docs/getting-started)
+[Discord Bot Account](https://discord.com/developers/docs/getting-started)\
+[Discord Pretty Help](https://pypi.org/project/discord-pretty-help/)
 
-**Installation**
+**Installation**\
 Step 1: Clone the repo\
 Step 2: Create a ``config.py`` in your repo folder and add the line below\
 ``BOT_TOKEN = "YOUR BOT'S TOKEN HERE"``\
