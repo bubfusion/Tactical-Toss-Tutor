@@ -8,11 +8,13 @@ from pretty_help import PrettyHelp
 intents = discord.Intents.default()
 intents.message_content = True
 
+
 help_command = commands.DefaultHelpCommand(
     no_category = 'Commands'
 )
 
-client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHelp())
+client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHelp(no_category = "Commands", show_index=False))
+
 
 maps_list = ["mirage", "inferno"]
 coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "dust2"]
@@ -60,7 +62,7 @@ def dictionary_keys(d):
 @client.event
 async def on_ready():
     print("Go go go!")
-    await client.change_presence(activity=discord.CustomActivity(name='TacToss.xyz | $help',emoji='🤖'))
+    await client.change_presence(activity=discord.CustomActivity(name='TacToss.xyz | $help'))
 
 
 @client.command(name = "smoke", aliases=["smokes"], brief = "Get GIF of lineup. Usage: $smoke <map> <area>")
@@ -74,11 +76,12 @@ async def smoke(ctx, map, area):
         await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try ``$maps``')
 
     else:
-         map_dic = map_to_dictionary[map]
-         if(area in map_dic):
-             await ctx.send(f'Smoke for {area} \n {map_dic[area]}')
-         else:   
+        map_dic = map_to_dictionary[map]
+        if(area in map_dic):
+            await ctx.send(f'Smoke for {area} \n {map_dic[area]}')
+        else:   
             await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
+
 
 @client.command(brief = "Lists maps with smoke lineups")
 async def maps(ctx):
