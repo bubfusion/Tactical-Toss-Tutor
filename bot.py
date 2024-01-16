@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 from config import BOT_TOKEN
 import KillReward
-
+from pretty_help import PrettyHelp
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -12,7 +12,7 @@ help_command = commands.DefaultHelpCommand(
     no_category = 'Commands'
 )
 
-client = commands.Bot(command_prefix='$', intents=intents, help_command=help_command)
+client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHelp())
 
 maps_list = ["mirage", "inferno"]
 coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "dust2"]
