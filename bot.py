@@ -16,11 +16,11 @@ help_command = commands.DefaultHelpCommand(
 client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHelp(no_category = "Commands", show_index=False))
 
 
-maps_list = ["mirage", "inferno"]
-coming_soon = ["anubis", "vertigo", "overpass", "nuke", "vertigo", "ancient", "dust2"]
+maps_list = ["mirage", "inferno", "nuke"]
+coming_soon = ["anubis", "vertigo", "overpass", "vertigo", "ancient", "dust2"]
 
-maps_list_display = ["Mirage", "Inferno"]
-coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Nuke", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
+maps_list_display = ["Mirage", "Inferno", "Nuke"]
+coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
 
 mirage = {
     "jungle": "https://imgur.com/iKj3upn",
@@ -41,10 +41,24 @@ inferno = {
     "long" : "https://imgur.com/OzKDwuZ"
 }
 
+nuke = {
+    "cross" : "https://imgur.com/vK7bMMC",
+    "red": "https://imgur.com/CTvJNnM",
+    "locker" : "https://imgur.com/HsQbzjT",
+    "garage" : "https://imgur.com/o65YSwo",
+    "decon" : "https://imgur.com/ycVfmwQ",
+    "right" : "https://imgur.com/IkORnKL",
+    "unbreakable" : "https://imgur.com/g8dkN8x",
+    "lurk" : "https://imgur.com/AXgpP4y",
+    "mini" : "https://imgur.com/mW2t4kQ"
+}
+
 map_to_dictionary = {
     "mirage" : mirage,
-    "inferno" : inferno
+    "inferno" : inferno,
+    "nuke" : nuke
 }
+
 
 def list_to_newline_string(list):
     final_string = ""
