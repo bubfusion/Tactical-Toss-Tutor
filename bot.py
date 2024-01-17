@@ -117,7 +117,7 @@ async def lineups(ctx, map):
 
 @client.command(brief = "Get an invite link to the offical Tactical Toss Tutor Discord!")
 async def join(ctx):
-    await ctx.send("Here is an invite to the Tactical Toss Tutor Discord: https://discord.gg/FAUuEUqsBD")
+    await ctx.send("Here is an invite to the Tactical Toss Tutor Discord: https://discord.gg/h572hfZDBh")
 
 @client.command(brief = "Get a link to invite the Tactical Toss Tutor bot to your own server!")
 async def invite(ctx):
