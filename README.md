@@ -12,7 +12,7 @@
 
 <p align="center">
 <a href="https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="12%"></a>
-<a href="https://discord.gg/FAUuEUqsBD"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
+<a href="https://discord.gg/h572hfZDBh"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
 <a href="https://github.com/bubfusion/Tactical-Toss-Tutor"><img src ="https://img.shields.io/badge/Github-white?style=for-the-badge&logo=github&logoColor=black" alt="Github" width="12.5%"></a>
 </p>
 
@@ -46,7 +46,7 @@ Getting this bot in your discord is as easy as just inviting it! Below is a butt
 
 #### Method 2:
 If you do not have a server you can add the bot to, join the offical Tactical Toss Tutor one!\
-<a href="https://discord.gg/FAUuEUqsBD"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
+<a href="https://discord.gg/h572hfZDBh"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
 
 #### Method 3:
 Since this is an open source program, you can run the bot yourself! \
@@ -99,7 +99,7 @@ Shows current weapons in CS2\
 ## Support
 Need help with the bot, have a suggestion, or don't have a server you can add the bot to? Join the discord with the button below! 
 
-<a href="https://discord.gg/FAUuEUqsBD"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
+<a href="https://discord.gg/h572hfZDBh"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
 
 
 ## License
