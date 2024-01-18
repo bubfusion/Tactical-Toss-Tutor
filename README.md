@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-<img src="https://i.imgur.com/dOc0xAv.png" alt="Tactical Toss Tutor" width="400"></a>
+<img src="https://i.imgur.com/dOc0xAv.png" alt="Tactical Toss Tutor" width="400">
   <br>
   Tactical Toss Tutor  
   <br>
@@ -45,7 +45,7 @@ Getting this bot in your discord is as easy as just inviting it! Below is a butt
 <a href="https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="11%"></a>
 
 #### Method 2:
-If you do not have a server you can add the bot to, join the offical Tactical Toss Tutor one!\
+If you do not have a server you can add the bot to, join the official Tactical Toss Tutor one!\
 <a href="https://discord.gg/h572hfZDBh"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
 
 #### Method 3:
@@ -79,7 +79,7 @@ View commands\
 Invite the bot to your own server\
 ```$invite```
 
-Join the offical Tactical Toss Tutor\
+Join the official Tactical Toss Tutor\
 ```$join```
 
 Link to the Tactical Toss Tutor website\
