@@ -79,7 +79,7 @@ async def on_ready():
     await client.change_presence(activity=discord.CustomActivity(name='TacToss.xyz | $help'))
 
 
-@client.command(name = "smoke", aliases=["smokes"], brief = "Get GIF of lineup. Usage: $smoke <map> <area>")
+@client.command(name = "smoke", aliases=["smokes", "s"], brief = "Get GIF of lineup. Usage: $smoke <map> <area>")
 async def smoke(ctx, map, area):
     map = map.lower()
 
