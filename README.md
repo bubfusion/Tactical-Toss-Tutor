@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-<img src="https://i.imgur.com/dOc0xAv.png" alt="Tactical Toss Tutor" width="400"></a>
+<img src="https://i.imgur.com/dOc0xAv.png" alt="Tactical Toss Tutor" width="400">
   <br>
   Tactical Toss Tutor  
   <br>
