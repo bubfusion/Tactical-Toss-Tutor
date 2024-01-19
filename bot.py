@@ -16,11 +16,11 @@ help_command = commands.DefaultHelpCommand(
 client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHelp(no_category = "Commands", show_index=False))
 
 
-maps_list = ["mirage", "inferno", "nuke"]
-coming_soon = ["anubis", "vertigo", "overpass", "vertigo", "ancient", "dust2"]
+maps_list = ["mirage", "inferno", "nuke", "overpass"]
+coming_soon = ["anubis", "vertigo", "vertigo", "ancient", "dust2"]
 
-maps_list_display = ["Mirage", "Inferno", "Nuke"]
-coming_soon_display = ["Anubis", "Vertigo", "Overpass", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
+maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass"]
+coming_soon_display = ["Anubis", "Vertigo", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
 
 mirage = {
     "jungle": "https://imgur.com/iKj3upn",
@@ -53,10 +53,21 @@ nuke = {
     "mini" : "https://imgur.com/mW2t4kQ"
 }
 
+overpass = {
+    "heaven" : "https://imgur.com/05Tgd87",
+    "heaven2" : "https://imgur.com/o2F50ma",
+    "bathroom" : "https://imgur.com/Q7EBDtt",
+    "garbage" : "https://imgur.com/tdz4nzK",
+    "bank" : "https://imgur.com/siFBiSz",
+    "cross" : "https://imgur.com/1FDi8np",
+    "ramp" : "https://imgur.com/EZlW9ee"
+}
+
 map_to_dictionary = {
     "mirage" : mirage,
     "inferno" : inferno,
-    "nuke" : nuke
+    "nuke" : nuke,
+    "overpass" : overpass
 }
 
 
