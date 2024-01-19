@@ -97,7 +97,7 @@ async def smoke(ctx, map, area):
             await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
 
 
-@client.command(brief = "Lists maps with smoke lineups")
+@client.command(brief = "Lists maps with smoke lineups", aliases=["lineup", "l"])
 async def maps(ctx):
     await ctx.send(f"The current maps with smokes are ```{list_to_newline_string(maps_list_display)} \n```Maps that are coming soon are```{list_to_newline_string(coming_soon_display)}```")
 
