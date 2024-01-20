@@ -17,13 +17,13 @@ client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHe
 
 
 maps_list = ["mirage", "inferno", "nuke", "overpass"]
-coming_soon = ["anubis", "vertigo", "vertigo", "ancient", "dust2"]
+coming_soon = ["anubis", "vertigo", "ancient", "dust2"]
 
 maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass"]
-coming_soon_display = ["Anubis", "Vertigo", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
+coming_soon_display = ["Anubis", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
 
 mirage = {
-    "jungle": "https://imgur.com/iKj3upn",
+    "jungle": "https://imgur.com/iKj3upn https://imgur.com/JGSqOpS",
     "ct" : "https://imgur.com/a/oKP0u9A",
     "stairs" : "https://imgur.com/49rLNUu",
     "con" : "https://imgur.com/9u2Y08P",
