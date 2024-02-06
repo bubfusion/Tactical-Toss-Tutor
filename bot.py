@@ -23,7 +23,7 @@ maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass"]
 coming_soon_display = ["Anubis", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
 
 mirage = {
-    "jungle": "https://imgur.com/iKj3upn https://imgur.com/JGSqOpS",
+    "jungle": "https://imgur.com/iKj3upn",
     "ct" : "https://imgur.com/a/oKP0u9A",
     "stairs" : "https://imgur.com/49rLNUu",
     "con" : "https://imgur.com/9u2Y08P",
@@ -108,11 +108,11 @@ async def smoke(ctx, map, area):
             await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
 
 
-@client.command(brief = "Lists maps with smoke lineups", aliases=["lineup", "l"])
+@client.command(brief = "Lists maps with smoke lineups")
 async def maps(ctx):
     await ctx.send(f"The current maps with smokes are ```{list_to_newline_string(maps_list_display)} \n```Maps that are coming soon are```{list_to_newline_string(coming_soon_display)}```")
 
-@client.command(brief = "Displays lineups for given map. Usage: $lineups <map>")
+@client.command(brief = "Displays lineups for given map. Usage: $lineups <map>", aliases=["lineup", "l"])
 async def lineups(ctx, map):
     map = map.lower()
 
