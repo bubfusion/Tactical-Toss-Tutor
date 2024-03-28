@@ -107,7 +107,7 @@ Need help with the bot, have a suggestion, or don't have a server you can add th
 MIT
 
 
-## Terms Of Serice (for the hosted discord bot)
+## Terms Of Service (for the hosted discord bot)
 **Conditions**
 General conditions regarding Tactical Toss Tutor bot are under this topic.
 
