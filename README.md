@@ -106,6 +106,20 @@ Need help with the bot, have a suggestion, or don't have a server you can add th
 
 MIT
 
+
+## Terms Of Serice (for the hosted discord bot)
+**Conditions**
+General conditions regarding Tactical Toss Tutor bot are under this topic.
+
+1. Our terms and conditions apply every user of Tactical Toss Tutor.
+2. By adding Tactical Toss Tutor in your server, you agree to these terms of service and the future terms which we may add after a notice.
+   
+**Terms of Use**
+1. Intentional command spam or attempts to crash the bot should not be made.
+2. Tactical Toss Tutor should not be used in bot spam servers which cause command spam.
+3. We reserve the rights to prohibit any server or user from using Tactical Toss Tutor.
+4. The client is responsible for any violation caused by them.
+5. We have the rights to update terms of service anytime with a notice in the support server.
 ---
 
 > GitHub: [@bubfusion](https://github.com/bubfusion)\
