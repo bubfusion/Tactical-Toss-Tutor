@@ -120,6 +120,10 @@ General conditions regarding Tactical Toss Tutor bot are under this topic.
 3. We reserve the rights to prohibit any server or user from using Tactical Toss Tutor.
 4. The client is responsible for any violation caused by them.
 5. We have the rights to update terms of service anytime with a notice in the support server.
+
+## Privacy Policy
+No personal data is collected or shared any third party, under any circumstances.
+
 ---
 
 > GitHub: [@bubfusion](https://github.com/bubfusion)\
