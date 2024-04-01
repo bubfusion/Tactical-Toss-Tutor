@@ -11,7 +11,7 @@
 <h4 align="center">Enhance your Counter-Strike 2 skills with Tactical Toss Tutor, a discord bot. TTT is the ultimate companion for swift and efficient mastery of smoke lineups, ensuring you dominate the match with precision and speed!</h4>
 
 <p align="center">
-<a href="https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="12%"></a>
+<a href="https://discord.com/oauth2/authorize?client_id=1194043397451808868"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="12%"></a>
 <a href="https://discord.gg/h572hfZDBh"><img src="https://img.shields.io/badge/Join-blue?style=for-the-badge&logo=Discord&logoColor=white" alt="Join" width="10%"></a>
 <a href="https://github.com/bubfusion/Tactical-Toss-Tutor"><img src ="https://img.shields.io/badge/Github-white?style=for-the-badge&logo=github&logoColor=black" alt="Github" width="12.5%"></a>
 </p>
@@ -42,7 +42,7 @@
 
 #### Method 1:
 Getting this bot in your discord is as easy as just inviting it! Below is a button you can click to add the bot to your server\
-<a href="https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="11%"></a>
+<a href="https://discord.com/oauth2/authorize?client_id=1194043397451808868"><img src="https://img.shields.io/badge/Invite-greenblue?style=for-the-badge&logo=Discord&logoColor=white" alt="Invite" width="11%"></a>
 
 #### Method 2:
 If you do not have a server you can add the bot to, join the official Tactical Toss Tutor one!\
