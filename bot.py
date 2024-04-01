@@ -10,12 +10,7 @@ from pretty_help import PrettyHelp
 intents = discord.Intents.default()
 intents.message_content = True
 
-
-help_command = commands.DefaultHelpCommand(
-    no_category = 'Commands'
-)
-
-client = commands.Bot(command_prefix='/', intents=intents, help_command=PrettyHelp(no_category = "Commands", show_index=False))
+client = commands.Bot(command_prefix='$', intents=intents, help_command=None)
 
 
 maps_list = ["mirage", "inferno", "nuke", "overpass"]
@@ -73,7 +68,6 @@ map_to_dictionary = {
 }
 
 def get_map_areas(map):
-    print(list(map_to_dictionary[map].keys()))
     return list(map_to_dictionary[map].keys())
 
 def list_to_newline_string(list):
@@ -93,9 +87,11 @@ def dictionary_keys(d):
 async def on_ready():
     print("Go go go!")
     await client.tree.sync()
-    await client.change_presence(activity=discord.CustomActivity(name='TacToss.xyz | $help'))
+    await client.change_presence(activity=discord.CustomActivity(name=' /help | SLASH COMMANDs | TacToss.xyz '))
 
-
+@client.tree.command(description="The help command")
+async def help (interaction: discord.Interaction):
+     await interaction.response.send_message("## Commands \nSee available maps:```/maps``` \nView lineup for specific map: ```/lineups <map>```\nGet a GIF for a specific area you want to smoke```/smoke <map> <area>```\nView commands```/help```\nInvite the bot to your own server```/invite```\nJoin the official Tactical Toss Tutor```/join```\nLink to the Tactical Toss Tutor website```/info```\n")
 
 @client.tree.command(description = "Lists maps with smoke lineups", name="maps")
 async def maps(interaction: discord.Interaction):
@@ -108,7 +104,7 @@ async def join(interaction: discord.Interaction):
 
 @client.tree.command(description = "Get a link to invite the Tactical Toss Tutor bot to your own server!")
 async def invite(interaction: discord.Interaction):
-    await interaction.response.send_message("You can add me to your own server with this link: https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot")
+    await interaction.response.send_message("You can add me to your own server with this link: https://discord.com/oauth2/authorize?client_id=1194043397451808868")
 
 @client.tree.command(description = "Get a link to the Tactical Toss Tutor website")
 async def info(interaction: discord.Interaction):
@@ -165,6 +161,33 @@ async def smoke(interaction: discord.Interaction, map: str, area: str):
             await interaction.response.send_message(f'Smoke for {area} \n {map_dic[area]}')
         else:   
             await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
+
+@client.command()
+async def smoke(ctx, map, area):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /smoke!")
+
+@client.command()
+async def maps(ctx):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /maps!")
+@client.command()
+async def lineups(ctx, map):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /lineups!")
+
+@client.command()
+async def join(ctx):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /join!")
+
+@client.command()
+async def invite(ctx):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /invite!")
+
+@client.command()
+async def info(ctx):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /info!")
+
+@client.command()
+async def help(ctx):
+    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /help!")
 
 client.run(BOT_TOKEN)
 
