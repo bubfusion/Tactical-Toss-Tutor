@@ -1,6 +1,8 @@
 
+from typing import List, Literal, Union, NamedTuple
 import discord
 from discord.ext import commands
+from discord import app_commands
 from config import BOT_TOKEN
 import KillReward
 from pretty_help import PrettyHelp
@@ -13,7 +15,7 @@ help_command = commands.DefaultHelpCommand(
     no_category = 'Commands'
 )
 
-client = commands.Bot(command_prefix='$', intents=intents, help_command=PrettyHelp(no_category = "Commands", show_index=False))
+client = commands.Bot(command_prefix='/', intents=intents, help_command=PrettyHelp(no_category = "Commands", show_index=False))
 
 
 maps_list = ["mirage", "inferno", "nuke", "overpass"]
@@ -70,6 +72,9 @@ map_to_dictionary = {
     "overpass" : overpass
 }
 
+def get_map_areas(map):
+    print(list(map_to_dictionary[map].keys()))
+    return list(map_to_dictionary[map].keys())
 
 def list_to_newline_string(list):
     final_string = ""
@@ -87,68 +92,79 @@ def dictionary_keys(d):
 @client.event
 async def on_ready():
     print("Go go go!")
+    await client.tree.sync()
     await client.change_presence(activity=discord.CustomActivity(name='TacToss.xyz | $help'))
 
 
-@client.command(name = "smoke", aliases=["smokes", "s"], brief = "Get GIF of lineup. Usage: $smoke <map> <area>")
-async def smoke(ctx, map, area):
+
+@client.tree.command(description = "Lists maps with smoke lineups", name="maps")
+async def maps(interaction: discord.Interaction):
+    await interaction.response.send_message(f"The current maps with smokes are ```{list_to_newline_string(maps_list_display)} \n```Maps that are coming soon are```{list_to_newline_string(coming_soon_display)}```")
+
+
+@client.tree.command(description = "Get an invite link to the offical Tactical Toss Tutor Discord!")
+async def join(interaction: discord.Interaction):
+    await interaction.response.send_message("Here is an invite to the Tactical Toss Tutor Discord: https://discord.gg/h572hfZDBh")
+
+@client.tree.command(description = "Get a link to invite the Tactical Toss Tutor bot to your own server!")
+async def invite(interaction: discord.Interaction):
+    await interaction.response.send_message("You can add me to your own server with this link: https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot")
+
+@client.tree.command(description = "Get a link to the Tactical Toss Tutor website")
+async def info(interaction: discord.Interaction):
+    await interaction.response.send_message("The offical Tactical Toss Tutor Website: http://tactoss.xyz/")
+
+async def map_autocomplete(
+    interaction: discord.Interaction,
+    current: str,
+) -> List[app_commands.Choice[str]]:
+    maps = maps_list
+    return [
+        app_commands.Choice(name=map, value=map)
+        for map in maps if current.lower() in map.lower()
+    ]
+
+@client.tree.command(description = "Displays lineups for given map. Usage: $lineups <map>")
+@app_commands.autocomplete(map=map_autocomplete)
+async def lineups(interaction: discord.Interaction, map: str):
     map = map.lower()
 
     if(map in coming_soon):
-        await ctx.send("That map is coming soon! To see the current available maps, try ``$maps``")
+        await interaction.response.send_message("That map is coming soon! To see the current available maps, try $maps")
 
     elif(map not in maps_list):
-        await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try ``$maps``')
+        await interaction.response.send_message('Oh no! Looks like you typed in an invalid map. To see the current available maps, try $maps')
+
+    else:
+         map_dic = map_to_dictionary[map]
+         await interaction.response.send_message(f"The current lineups for {map} are ```{dictionary_keys(map_dic)}```")
+
+async def area_autocomplete(
+    interaction: discord.Interaction,
+    current: str,
+) -> List[app_commands.Choice[str]]:
+    areas = get_map_areas(interaction.namespace.map)
+    return [
+        app_commands.Choice(name=area, value=area)
+        for area in areas if current.lower() in area.lower()
+    ]
+
+@client.tree.command(description = "Get GIF of lineup. Usage: $smoke <map> <area>")
+@app_commands.autocomplete(map=map_autocomplete, area=area_autocomplete)
+async def smoke(interaction: discord.Interaction, map: str, area: str):
+    map = map.lower()
+    if(map in coming_soon):
+        await interaction.response.send_message("That map is coming soon! To see the current available maps, try ``$maps``")
+
+    elif(map not in maps_list):
+        await interaction.response.send_message('Oh no! Looks like you typed in an invalid map. To see the current available maps, try ``$maps``')
 
     else:
         map_dic = map_to_dictionary[map]
         if(area in map_dic):
-            await ctx.send(f'Smoke for {area} \n {map_dic[area]}')
+            await interaction.response.send_message(f'Smoke for {area} \n {map_dic[area]}')
         else:   
-            await ctx.send(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
-
-
-@client.command(brief = "Lists maps with smoke lineups")
-async def maps(ctx):
-    await ctx.send(f"The current maps with smokes are ```{list_to_newline_string(maps_list_display)} \n```Maps that are coming soon are```{list_to_newline_string(coming_soon_display)}```")
-
-@client.command(brief = "Displays lineups for given map. Usage: $lineups <map>", aliases=["lineup", "l"])
-async def lineups(ctx, map):
-    map = map.lower()
-
-    if(map in coming_soon):
-        await ctx.send("That map is coming soon! To see the current available maps, try $maps")
-
-    elif(map not in maps_list):
-        await ctx.send('Oh no! Looks like you typed in an invalid map. To see the current available maps, try $maps')
-
-    else:
-         map_dic = map_to_dictionary[map]
-         await ctx.send(f"The current lineups for {map} are ```{dictionary_keys(map_dic)}```")
-
-@client.command(brief = "Get an invite link to the offical Tactical Toss Tutor Discord!")
-async def join(ctx):
-    await ctx.send("Here is an invite to the Tactical Toss Tutor Discord: https://discord.gg/h572hfZDBh")
-
-@client.command(brief = "Get a link to invite the Tactical Toss Tutor bot to your own server!")
-async def invite(ctx):
-    await ctx.send("You can add me to your own server with this link: https://discord.com/api/oauth2/authorize?client_id=1194043397451808868&permissions=125952&scope=bot")
-
-@client.command(brief = "Get a link to the Tactical Toss Tutor website")
-async def info(ctx):
-    await ctx.send("The offical Tactical Toss Tutor Website: http://tactoss.xyz/")
-
-@client.command(brief = "Gets the kill reward for a weapon. Usage: $kr <weapon>")
-async def kr(ctx, weapon):
-    weapon = weapon.lower()
-    if (weapon in KillReward.kill_reward):
-        await ctx.send(F"{weapon} kill-reward: ${KillReward.kill_reward[weapon]}")
-    else:
-        await ctx.send("Can't find that weapon! Try $weapons to see the avaliable weapons")
-
-@client.command(brief = "Get the list of weapons in CS2")
-async def weapons(ctx):
-    await ctx.send(F"```{dictionary_keys(KillReward.kill_reward_display)}```")
+            await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
 
 client.run(BOT_TOKEN)
 
