@@ -87,7 +87,7 @@ def dictionary_keys(d):
 async def on_ready():
     print("Go go go!")
     await client.tree.sync()
-    await client.change_presence(activity=discord.CustomActivity(name=' /help | SLASH COMMANDs | TacToss.xyz '))
+    await client.change_presence(activity=discord.CustomActivity(name=' /help | TacToss.xyz '))
 
 @client.tree.command(description="The help command")
 async def help (interaction: discord.Interaction):
