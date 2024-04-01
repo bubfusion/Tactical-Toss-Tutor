@@ -65,31 +65,25 @@ Step 3: Run ``bot.py``
 
 ## Commands
 See available maps:\
-```$maps```
+```/maps```
 
 View lineup for specific map:\
-```$lineups <map>```
+```/lineups <map>```
 
 Get a GIF for a specific area you want to smoke\
-```$smoke <map> <area>```
+```/smoke <map> <area>```
 
 View commands\
-```$help```
+```/help```
 
 Invite the bot to your own server\
-```$invite```
+```/invite```
 
 Join the official Tactical Toss Tutor\
-```$join```
+```/join```
 
 Link to the Tactical Toss Tutor website\
-```$info```
-
-Shows kill reward for a weapon\
-```$kr <weapon>```
-
-Shows current weapons in CS2\
-```$weapons```
+```/info```
 
 **More coming soon!**
 
