@@ -25,7 +25,7 @@
   <a href="#license">License</a>
   </p>
   <p align="center">
-  <img src="https://github.com/bubfusion/Tactical-Toss-Tutor/blob/main/Images/Preview.gif" alt="Preview" width="80%">
+  <img src="https://github.com/bubfusion/Tactical-Toss-Tutor/blob/main/Images/PreviewNew.gif" alt="Preview" width="80%">
 </p>
 
 
