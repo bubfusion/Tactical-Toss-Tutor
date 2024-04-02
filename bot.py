@@ -37,15 +37,15 @@ inferno = {
 }
 
 nuke = {
-    "cross" : "https://imgur.com/vK7bMMC",
-    "red": "https://imgur.com/CTvJNnM",
-    "locker" : "https://imgur.com/HsQbzjT",
-    "garage" : "https://imgur.com/o65YSwo",
-    "decon" : "https://imgur.com/ycVfmwQ",
-    "right" : "https://imgur.com/IkORnKL",
-    "unbreakable" : "https://imgur.com/g8dkN8x",
-    "lurk" : "https://imgur.com/AXgpP4y",
-    "mini" : "https://imgur.com/mW2t4kQ"
+    "cross" : "https://imgur.com/vK7bMMC \nhttps://imgur.com/N7534PS",
+    "red": "https://imgur.com/CTvJNnM \nhttps://imgur.com/RoDHKsB",
+    "locker" : "https://imgur.com/HsQbzjT \nhttps://imgur.com/1s7eSEi",
+    "garage" : "https://imgur.com/o65YSwo \nhttps://imgur.com/x8PuUzf",
+    "decon" : "https://imgur.com/ycVfmwQ \nhttps://imgur.com/EMf37B2",
+    "right" : "https://imgur.com/IkORnKL \nhttps://imgur.com/3UL4eBq",
+    "unbreakable" : "https://imgur.com/g8dkN8x \nhttps://imgur.com/77EWSFX",
+    "lurk" : "https://imgur.com/AXgpP4y \nhttps://imgur.com/dvRkJi3",
+    "mini" : "https://imgur.com/mW2t4kQ \nhttps://imgur.com/c7DZJnQ"
 }
 
 overpass = {
