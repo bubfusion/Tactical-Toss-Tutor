@@ -11,8 +11,6 @@ intents.message_content = True
 
 client = commands.Bot(command_prefix='$', intents=intents, help_command=None)
 
-total_calls = 0
-
 maps_list = ["mirage", "inferno", "nuke", "overpass"]
 coming_soon = ["anubis", "vertigo", "ancient", "dust2"]
 
@@ -158,8 +156,7 @@ async def smoke(interaction: discord.Interaction, map: str, area: str):
     else:
         map_dic = map_to_dictionary[map]
         if(area in map_dic):
-            total_calls += 1
-            print("Total smoke calls: ", total_calls)
+            print("Smoke call")
             await interaction.response.send_message(f'Smoke for {area} \n {map_dic[area]}')
         else:   
             await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
