@@ -4,7 +4,6 @@ import discord
 from discord.ext import commands
 from discord import app_commands
 from config import BOT_TOKEN
-import KillReward
 from pretty_help import PrettyHelp
 
 intents = discord.Intents.default()
