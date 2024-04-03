@@ -118,16 +118,16 @@ async def map_autocomplete(
         for map in maps if current.lower() in map.lower()
     ]
 
-@client.tree.command(description = "Displays lineups for given map. Usage: $lineups <map>")
+@client.tree.command(description = "Displays lineups for given map. Usage: /lineups <map>")
 @app_commands.autocomplete(map=map_autocomplete)
 async def lineups(interaction: discord.Interaction, map: str):
     map = map.lower()
 
     if(map in coming_soon):
-        await interaction.response.send_message("That map is coming soon! To see the current available maps, try $maps")
+        await interaction.response.send_message("That map is coming soon! To see the current available maps, try /maps")
 
     elif(map not in maps_list):
-        await interaction.response.send_message('Oh no! Looks like you typed in an invalid map. To see the current available maps, try $maps')
+        await interaction.response.send_message('Oh no! Looks like you typed in an invalid map. To see the current available maps, try /maps')
 
     else:
          map_dic = map_to_dictionary[map]
@@ -143,15 +143,15 @@ async def area_autocomplete(
         for area in areas if current.lower() in area.lower()
     ]
 
-@client.tree.command(description = "Get GIF of lineup. Usage: $smoke <map> <area>")
+@client.tree.command(description = "Get GIF of lineup. Usage: /smoke <map> <area>")
 @app_commands.autocomplete(map=map_autocomplete, area=area_autocomplete)
 async def smoke(interaction: discord.Interaction, map: str, area: str):
     map = map.lower()
     if(map in coming_soon):
-        await interaction.response.send_message("That map is coming soon! To see the current available maps, try ``$maps``")
+        await interaction.response.send_message("That map is coming soon! To see the current available maps, try ``/maps``")
 
     elif(map not in maps_list):
-        await interaction.response.send_message('Oh no! Looks like you typed in an invalid map. To see the current available maps, try ``$maps``')
+        await interaction.response.send_message('Oh no! Looks like you typed in an invalid map. To see the current available maps, try ``/maps``')
 
     else:
         map_dic = map_to_dictionary[map]
@@ -159,7 +159,7 @@ async def smoke(interaction: discord.Interaction, map: str, area: str):
             print("Smoke call")
             await interaction.response.send_message(f'Smoke for {area} \n{map_dic[area]}')
         else:   
-            await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``$lineups <map>``')
+            await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``/lineups <map>``')
 
 @client.command()
 async def smoke(ctx, map, area):
