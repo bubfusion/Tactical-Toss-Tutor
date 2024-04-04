@@ -7,8 +7,6 @@ from config import BOT_TOKEN
 from pretty_help import PrettyHelp
 
 intents = discord.Intents.default()
-intents.message_content = True
-
 client = commands.Bot(command_prefix='$', intents=intents, help_command=None)
 
 maps_list = ["mirage", "inferno", "nuke", "overpass"]
@@ -160,33 +158,6 @@ async def smoke(interaction: discord.Interaction, map: str, area: str):
             await interaction.response.send_message(f'Smoke for {area} \n{map_dic[area]}')
         else:   
             await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``/lineups <map>``')
-
-@client.command()
-async def smoke(ctx, map, area):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /smoke!")
-
-@client.command()
-async def maps(ctx):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /maps!")
-@client.command()
-async def lineups(ctx, map):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /lineups!")
-
-@client.command()
-async def join(ctx):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /join!")
-
-@client.command()
-async def invite(ctx):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /invite!")
-
-@client.command()
-async def info(ctx):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /info!")
-
-@client.command()
-async def help(ctx):
-    await ctx.send("Tactical Toss Tutor now uses slash commands. Try using /help!")
 
 client.run(BOT_TOKEN)
 
