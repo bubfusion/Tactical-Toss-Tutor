@@ -9,11 +9,24 @@ from pretty_help import PrettyHelp
 intents = discord.Intents.default()
 client = commands.Bot(command_prefix='$', intents=intents, help_command=None)
 
-maps_list = ["mirage", "inferno", "nuke", "overpass"]
-coming_soon = ["anubis", "vertigo", "ancient", "dust2"]
+maps_list = ["mirage", "inferno", "nuke", "overpass", "vertigo"]
+coming_soon = ["anubis", "ancient", "dust 2"]
 
-maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass"]
-coming_soon_display = ["Anubis", "Vertigo", "Ancient", "Dust 2 (use dust2 in commands)"]
+maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass", "Vertigo"]
+coming_soon_display = ["Anubis", "Ancient", "Dust 2"]
+
+
+
+vertigo = {
+    "a left" : "https://imgur.com/eQrvQ9N \nhttps://imgur.com/NWb7hHM",
+    "a right" : "https://imgur.com/81yaPTs \nhttps://imgur.com/BOQWlEE",
+    "boost" : "https://imgur.com/88LzrIv \nhttps://imgur.com/LMzNecp",
+    "mid heaven": "https://imgur.com/i7ZzrTj \nhttps://imgur.com/kQhOFSa",
+    "b headshot" : "https://imgur.com/8qKATMI \nhttps://imgur.com/433jTiK",
+    "gen right" : "https://imgur.com/DG1UT2h \nhttps://imgur.com/CbvUiZV",
+    "gen left" : "https://imgur.com/ZcXtNfZ \nhttps://imgur.com/ZcXtNfZ",
+    "a ramp" : "https://imgur.com/ogsC8Cp \nhttps://imgur.com/8qKATMI"
+}
 
 mirage = {
     "jungle": "https://imgur.com/iKj3upn",
@@ -60,7 +73,8 @@ map_to_dictionary = {
     "mirage" : mirage,
     "inferno" : inferno,
     "nuke" : nuke,
-    "overpass" : overpass
+    "overpass" : overpass,
+    "vertigo" : vertigo
 }
 
 def get_map_areas(map):
