@@ -9,11 +9,11 @@ from pretty_help import PrettyHelp
 intents = discord.Intents.default()
 client = commands.Bot(command_prefix='$', intents=intents, help_command=None)
 
-maps_list = ["mirage", "inferno", "nuke", "overpass", "vertigo"]
-coming_soon = ["anubis", "ancient", "dust 2"]
+maps_list = ["mirage", "inferno", "nuke", "overpass", "vertigo", "anubis"]
+coming_soon = ["ancient", "dust 2"]
 
-maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass", "Vertigo"]
-coming_soon_display = ["Anubis", "Ancient", "Dust 2"]
+maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass", "Vertigo", "Anubis"]
+coming_soon_display = ["Ancient", "Dust 2"]
 
 
 
@@ -69,12 +69,30 @@ overpass = {
     "ramp" : "https://imgur.com/EZlW9ee"
 }
 
+anubis = {
+    "window" : "https://imgur.com/b1YAWOV\nhttps://imgur.com/9vo2GX7",
+    "con" : "https://imgur.com/CR5U3Xt\nhttps://imgur.com/N8AyjY9",
+    "con deep": "https://imgur.com/Tay7XPE\nhttps://imgur.com/vRXRlkk",
+    "temple mid" : "https://imgur.com/37vPkUV\nhttps://imgur.com/XFa33vy",
+    "b left fast" : "https://imgur.com/11jJhI0\nhttps://imgur.com/kXYXAen",
+    "b left" : "https://imgur.com/P7fBUTM\nhttps://imgur.com/IYyiDfz",
+    "temple" : "https://imgur.com/VaVOA52\nhttps://imgur.com/Kr1N6U0",
+    "b ct" : "https://imgur.com/Cg8XxPU\nhttps://imgur.com/BCKp4nP",
+    "b right" : "https://imgur.com/CdiLuUo\nhttps://imgur.com/0nCYOqr",
+    "a lurk" : "https://imgur.com/fssJf9r\nhttps://imgur.com/pUCMU1z",
+    "heaven" : "**THIS IS A W+JUMP THROW**\nhttps://imgur.com/vS0gOWK\nhttps://imgur.com/bBnugST",
+    "camera" : "https://imgur.com/eercpSO\nhttps://imgur.com/nkn27pT"
+
+
+}
+
 map_to_dictionary = {
     "mirage" : mirage,
     "inferno" : inferno,
     "nuke" : nuke,
     "overpass" : overpass,
-    "vertigo" : vertigo
+    "vertigo" : vertigo,
+    "anubis": anubis
 }
 
 def get_map_areas(map):
