@@ -25,7 +25,7 @@ vertigo = {
     "b headshot" : "https://imgur.com/8qKATMI \nhttps://imgur.com/433jTiK",
     "gen right" : "https://imgur.com/DG1UT2h \nhttps://imgur.com/CbvUiZV",
     "gen left" : "https://imgur.com/V4gB1Tp \nhttps://imgur.com/ZcXtNfZ",
-    "a ramp" : "https://imgur.com/ogsC8Cp \nhttps://imgur.com/8qKATMI"
+    "a ramp" : "https://imgur.com/ogsC8Cp \nhttps://imgur.com/Uy841QS"
 }
 
 mirage = {
