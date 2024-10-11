@@ -116,7 +116,7 @@ General conditions regarding Tactical Toss Tutor bot are under this topic.
 5. We have the rights to update terms of service anytime with a notice in the support server.
 
 ## Privacy Policy
-No personal data is collected or shared any third party, under any circumstances.
+No personal data is collected or shared to any third party, under any circumstances.
 
 ---
 
