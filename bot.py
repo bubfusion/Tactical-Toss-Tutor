@@ -188,7 +188,7 @@ async def smoke(interaction: discord.Interaction, map: str, area: str):
         if(area in map_dic):
             print("Smoke call")
             if map == "vertigo":
-                await interaction.response.send_message(f'WARINING VERTIGO SMOKES MAY BE OUT OF DATE! Smoke for {area} \n{map_dic[area]}')
+                await interaction.response.send_message(f'**WARINING VERTIGO SMOKES MAY BE OUT OF DATE!**\nSmoke for {area} \n{map_dic[area]}')
             else:
                 await interaction.response.send_message(f'Smoke for {area} \n{map_dic[area]}')
         else:   
