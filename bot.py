@@ -187,7 +187,10 @@ async def smoke(interaction: discord.Interaction, map: str, area: str):
         map_dic = map_to_dictionary[map]
         if(area in map_dic):
             print("Smoke call")
-            await interaction.response.send_message(f'Smoke for {area} \n{map_dic[area]}')
+            if map == "vertigo":
+                await interaction.response.send_message(f'WARINING VERTIGO SMOKES MAY BE OUT OF DATE! Smoke for {area} \n{map_dic[area]}')
+            else:
+                await interaction.response.send_message(f'Smoke for {area} \n{map_dic[area]}')
         else:   
             await interaction.response.send_message(f'Uh oh, that smoke isnt added yet! To see the current lineups for a map, try ``/lineups <map>``')
 
