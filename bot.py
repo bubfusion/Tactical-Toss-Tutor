@@ -9,11 +9,11 @@ from pretty_help import PrettyHelp
 intents = discord.Intents.default()
 client = commands.Bot(command_prefix='$', intents=intents, help_command=None)
 
-maps_list = ["mirage", "inferno", "nuke", "overpass", "vertigo", "anubis"]
-coming_soon = ["ancient", "dust 2"]
+maps_list = ["mirage", "inferno", "nuke", "overpass", "vertigo", "anubis", "dust 2"]
+coming_soon = ["ancient"]
 
-maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass", "Vertigo", "Anubis"]
-coming_soon_display = ["Ancient", "Dust 2"]
+maps_list_display = ["Mirage", "Inferno", "Nuke", "Overpass", "Vertigo", "Anubis", "Dust 2"]
+coming_soon_display = ["Ancient"]
 
 
 
@@ -86,13 +86,23 @@ anubis = {
 
 }
 
+dust2 = {
+    "xbox" : "https://imgur.com/9lfPEug\nhttps://imgur.com/0WMiA4H",
+    "corner" : "https://imgur.com/5oEoMP5\nhttps://imgur.com/NDBnxCP",
+    "cross" : "https://imgur.com/F6BDTCr\nhttps://imgur.com/0WMiA4H",
+    "ct b" : "https://imgur.com/8zwtSQX\nhttps://imgur.com/mbMH8BX",
+    "window" : "https://imgur.com/qzPvD03\nhttps://imgur.com/A6nEm5Q",
+    "b door" : "https://imgur.com/bXirDue\nhttps://imgur.com/KHlu4sQ"
+}
+
 map_to_dictionary = {
     "mirage" : mirage,
     "inferno" : inferno,
     "nuke" : nuke,
     "overpass" : overpass,
     "vertigo" : vertigo,
-    "anubis": anubis
+    "anubis": anubis,
+    "dust 2" :dust2
 }
 
 def get_map_areas(map):
